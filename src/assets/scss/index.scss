@@ -94,6 +94,15 @@ html {
   font-size: 0.875rem;
 }
 
+.form__check:checked[type="checkbox"] {
+  background-image: url("../images/iconos/gl_correct.png") !important;
+}
+
+.form__check:checked {
+  background-color: $verde !important;
+  border-color: $verde !important;
+}
+
 @media (min-width: 576px) {
   .contenedor {
     grid-template-columns: 0.9fr 1fr; /*LOS ELEMENTOS DE LA GRID SE DIVIDIRAN EN 2 COLUMNAS DE ESE TAMAÑO */

@@ -40,7 +40,7 @@ const FormInicio = () => {
         </div>
 
         <div className="form-check">
-          <input className="form-check-input" type="checkbox" value="" />
+          <input className="form-check-input form__check" type="checkbox" value="" />
           <label className="form__condiciones">
             Acepto la{" "}
             <span className="form__condiciones__descargar">
@@ -51,7 +51,7 @@ const FormInicio = () => {
         </div>
 
         <div className="form-check">
-          <input className="form-check-input" type="checkbox" value="" />
+          <input className="form-check-input form__check" type="checkbox" value="" />
           <label className="form__condiciones">
             Acepto la{" "}
             <span className="form__condiciones__descargar">
