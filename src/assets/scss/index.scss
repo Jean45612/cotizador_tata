@@ -1,0 +1,133 @@
+@import "_variables";
+@import "_mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 13px;
+}
+
+.contenedor {
+  display: grid;
+  font-weight: 300;
+}
+
+.base {
+  background-image: url("./../images/Base.png");
+  background-size: 100% 100%;
+  color: white;
+  padding: 5.625rem 1.875rem 2.5rem;
+  position: relative;
+}
+
+.base__titulo {
+  font-weight: inherit;
+  margin-bottom: 1.875rem;
+}
+
+.base__titulo--negrita {
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.base__img {
+  width: 20px;
+  height: 20px;
+}
+
+.base__final {
+  font-size: 0.8125rem;
+  margin-top: 6.25rem;
+}
+
+.base__ilustracion {
+  position: absolute;
+  bottom: 3.125rem;
+  right: -7.5rem;
+  display: none;
+}
+
+.formInicio {
+  padding: 4.375rem 1.875rem;
+}
+
+.formInicio__titulo {
+  font-weight: inherit;
+}
+
+.formInicio__titulo--negrita {
+  font-weight: 400;
+  color: $celeste;
+}
+
+.form__condiciones__descargar {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.btnForm {
+  display: inline-block;
+  font-weight: 300;
+  line-height: 1.5;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.625rem 1.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.3125rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  background: $celeste;
+}
+
+.form__condiciones {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 576px) {
+  .contenedor {
+    grid-template-columns: 0.9fr 1fr; /*LOS ELEMENTOS DE LA GRID SE DIVIDIRAN EN 2 COLUMNAS DE ESE TAMAÑO */
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  .base__ilustracion {
+    display: block;
+  }
+
+  .formInicio {
+    padding: 3.75rem 0.625rem 0rem 5.3125rem;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  .base {
+    padding: 5.625rem 5rem 1.875rem;
+  }
+
+  .formInicio {
+    padding: 3.75rem 1.875rem 0rem 7.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .formInicio {
+    padding: 3.75rem 4.6875rem 0 11.875rem;
+  }
+}
