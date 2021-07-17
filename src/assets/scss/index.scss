@@ -103,6 +103,11 @@ html {
   border-color: $verde !important;
 }
 
+.alert__text {
+  font-size: 0.8125rem;
+  margin-bottom: 0;
+}
+
 @media (min-width: 576px) {
   .contenedor {
     grid-template-columns: 0.9fr 1fr; /*LOS ELEMENTOS DE LA GRID SE DIVIDIRAN EN 2 COLUMNAS DE ESE TAMAÑO */
