@@ -5,12 +5,14 @@ import number from "../../../utils/validators/number";
 import Error from "../../common/Error";
 import Persona from "../../../utils/interfaces/persona";
 
-const FormInicio = ({ handleNext, updatePersona }: any) => {
+const FormInicio = ({ handleNext, updatePersona, dataPersona }: any) => {
   const {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm<Persona>();
+  } = useForm<Persona>({
+    defaultValues: dataPersona,
+  });
 
   const onSubmit = (form: Persona) => {
     updatePersona(form);
@@ -18,7 +20,12 @@ const FormInicio = ({ handleNext, updatePersona }: any) => {
     fetch("https://randomuser.me/api")
       .then((response) => response.json())
       .then((data) => {
-        updatePersona(data);
+        let result = data.results[0];
+        updatePersona({
+          nombre: result.name.first,
+          apePaterno: result.name.last,
+          genero: result.gender === "male" ? "0" : "1",
+        });
         handleNext();
       });
   };

@@ -6,7 +6,7 @@ import Paso2 from "../layout/base/Paso2";
 import Persona from "../../utils/interfaces/persona";
 
 const tempPersona: Persona = {
-  tipoDocumento: "",
+  tipoDocumento: "1",
   numeroDocumento: "",
   fechaNacimiento: "",
   nombre: "",
@@ -28,22 +28,36 @@ export default function StepperBase() {
   const [persona, setPersona] = React.useState<Persona>(tempPersona);
 
   const updatePersona = (form: Persona) => {
-    setPersona({
-      ...persona,
-      ...form,
-    });
+    setPersona((prevPersona) => ({ ...prevPersona, ...form }));
   };
 
   const getStepContent = (step: number) => {
     switch (step) {
       case 0:
         return (
-          <FormInicio handleNext={handleNext} updatePersona={updatePersona} />
+          <FormInicio
+            handleNext={handleNext}
+            updatePersona={updatePersona}
+            dataPersona={persona}
+          />
         );
       case 1:
-        return <Paso1 handleNext={handleNext} handleBack={handleBack} />;
+        return (
+          <Paso1
+            handleNext={handleNext}
+            handleBack={handleBack}
+            updatePersona={updatePersona}
+            dataPersona={persona}
+          />
+        );
       case 2:
-        return <Paso2 handleNext={handleNext} handleBack={handleBack} />;
+        return (
+          <Paso2
+            handleNext={handleNext}
+            handleBack={handleBack}
+            updatePersona={updatePersona}
+          />
+        );
       default:
         return "Unknown step";
     }

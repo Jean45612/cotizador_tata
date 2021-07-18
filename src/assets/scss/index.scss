@@ -121,6 +121,23 @@ html {
   padding: 1.875rem 4.375rem;
 }
 
+.fontInherit {
+  font-weight: inherit;
+}
+
+.color-celeste {
+  color: $celeste;
+}
+
+.backIcon {
+  border: 1px solid $celeste;
+  padding: 0px 5px;
+  border-radius: 100%;
+  color: $celeste;
+  margin-left: -40px;
+  cursor: pointer;
+}
+
 @media (min-width: 576px) {
   .contenedor {
     grid-template-columns: 0.9fr 1fr; /*LOS ELEMENTOS DE LA GRID SE DIVIDIRAN EN 2 COLUMNAS DE ESE TAMAÑO */
