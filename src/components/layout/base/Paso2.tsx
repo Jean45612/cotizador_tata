@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Persona from "../../../utils/interfaces/persona";
-import Error from "../../common/Error";
 import iconCorrect from "../../../assets/images/iconos/gl_correct.png";
 
 interface interfacePlan {
@@ -46,18 +45,22 @@ const Paso2 = ({ handleNext, handleBack, updatePersona, dataPersona }: any) => {
     register,
     formState: { errors },
     handleSubmit,
+    setValue,
+    watch,
   } = useForm<Persona>({
     defaultValues: dataPersona,
   });
+
+  const watchPlan = watch("plan", dataPersona.plan);
 
   const onSubmit = (form: Persona) => {
     updatePersona(form);
     handleNext();
   };
 
-  const selectPlan = (id: string) => {
-    updatePersona({ plan: id });
-  };
+  useEffect(() => {
+    register("plan", { required: true });
+  }, [register]);
 
   return (
     <div className="formInicio">
@@ -79,36 +82,40 @@ const Paso2 = ({ handleNext, handleBack, updatePersona, dataPersona }: any) => {
             <PlanBox
               titulo="BÁSICO"
               precio="160"
-              selectPlan={() => selectPlan("1")}
-              selected={dataPersona.plan === "1"}
+              selectPlan={() => setValue("plan", "1")}
+              selected={watchPlan === "1"}
             />
           </div>
           <div className="col-3 col-sm-6 col-lg-3">
             <PlanBox
               titulo="AVANZADO"
               precio="200"
-              selectPlan={() => selectPlan("2")}
-              selected={dataPersona.plan === "2"}
+              selectPlan={() => setValue("plan", "2")}
+              selected={watchPlan === "2"}
             />
           </div>
           <div className="col-3 col-sm-6 col-lg-3">
             <PlanBox
               titulo="PREMIUM"
               precio="250"
-              selectPlan={() => selectPlan("3")}
-              selected={dataPersona.plan === "3"}
+              selectPlan={() => setValue("plan", "3")}
+              selected={watchPlan === "3"}
             />
           </div>
           <div className="col-3 col-sm-6 col-lg-3">
             <PlanBox
               titulo="FULL"
               precio="500"
-              selectPlan={() => selectPlan("4")}
-              selected={dataPersona.plan === "4"}
+              selectPlan={() => setValue("plan", "4")}
+              selected={watchPlan === "4"}
             />
           </div>
         </div>
-        {errors && <Error error={errors} />}
+        {errors.plan && (
+          <div className="alert alert-danger mb-0 mt-4">
+            <p className="alert__text">Debe seleccionar un plan.</p>
+          </div>
+        )}
         <br />
         <div className="text-end">
           <input className="btnForm" type="submit" value="CONTINUAR   >" />
