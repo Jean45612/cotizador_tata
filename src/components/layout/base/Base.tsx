@@ -1,7 +1,7 @@
 import React from "react";
-import imgMobile from "../../assets/images/iconos/gl_mobile-20x20.png";
-import imgShield from "../../assets/images/iconos/gl_shield-20x20.png";
-import imgIlustration from "../../assets/images/Illustration-1.png";
+import imgMobile from "../../../assets/images/iconos/gl_mobile-20x20.png";
+import imgShield from "../../../assets/images/iconos/gl_shield-20x20.png";
+import imgIlustration from "../../../assets/images/Illustration-1.png";
 
 interface Props {
   img: string;

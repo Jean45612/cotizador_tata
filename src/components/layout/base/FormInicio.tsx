@@ -1,27 +1,26 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import length from "../../utils/validators/length";
-import number from "../../utils/validators/number";
-import Error from "../common/Error";
+import length from "../../../utils/validators/length";
+import number from "../../../utils/validators/number";
+import Error from "../../common/Error";
+import Persona from "../../../utils/interfaces/persona";
 
-interface Persona {
-  tipoDocumento: string;
-  numeroDocumento: string;
-  fechaNacimiento: string;
-  celular: string;
-  terminos: boolean;
-  comunicaciones: boolean;
-}
-
-const FormInicio = () => {
+const FormInicio = ({ handleNext, updatePersona }: any) => {
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm<Persona>();
 
-  const onSubmit = (data: any) => {
-    console.log("data", data);
+  const onSubmit = (form: Persona) => {
+    updatePersona(form);
+
+    fetch("https://randomuser.me/api")
+      .then((response) => response.json())
+      .then((data) => {
+        updatePersona(data);
+        handleNext();
+      });
   };
 
   return (
@@ -32,8 +31,8 @@ const FormInicio = () => {
       </h2>
       <p>Ingresa los datos para comenzar</p>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="row mx-0 mb-3">
-          <div className="col-3 p-0">
+        <div className="row mb-3">
+          <div className="col-3 pe-0">
             <select
               className="form-select h-100"
               placeholder="Tipo de documento"
@@ -44,7 +43,7 @@ const FormInicio = () => {
               <option value="1">DNI</option>
             </select>
           </div>
-          <div className="form-floating col-9 p-0 mb-0">
+          <div className="form-floating col-9 ps-0 mb-0">
             <input
               type="text"
               className="form-control"

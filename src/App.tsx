@@ -1,12 +1,12 @@
 import React from "react";
-import Base from "./components/layout/Base";
-import FormInicio from "./components/views/FormInicio";
+import Base from "./components/layout/base/Base";
+import StepperBase from "./components/views/StepperBase";
 
 function App() {
   return (
     <div className="contenedor">
-      <Base/>
-      <FormInicio/>
+      <Base />
+      <StepperBase/>
     </div>
   );
 }
