@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/cotizador_tata/static/css/main.6718a0fa.chunk.css",
+    "main.js": "/cotizador_tata/static/js/main.fec95bcd.chunk.js",
+    "main.js.map": "/cotizador_tata/static/js/main.fec95bcd.chunk.js.map",
+    "runtime-main.js": "/cotizador_tata/static/js/runtime-main.9b97d3de.js",
+    "runtime-main.js.map": "/cotizador_tata/static/js/runtime-main.9b97d3de.js.map",
+    "static/css/2.4be38407.chunk.css": "/cotizador_tata/static/css/2.4be38407.chunk.css",
+    "static/js/2.7bb1f176.chunk.js": "/cotizador_tata/static/js/2.7bb1f176.chunk.js",
+    "static/js/2.7bb1f176.chunk.js.map": "/cotizador_tata/static/js/2.7bb1f176.chunk.js.map",
+    "index.html": "/cotizador_tata/index.html",
+    "static/css/2.4be38407.chunk.css.map": "/cotizador_tata/static/css/2.4be38407.chunk.css.map",
+    "static/css/main.6718a0fa.chunk.css.map": "/cotizador_tata/static/css/main.6718a0fa.chunk.css.map",
+    "static/js/2.7bb1f176.chunk.js.LICENSE.txt": "/cotizador_tata/static/js/2.7bb1f176.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9b97d3de.js",
+    "static/css/2.4be38407.chunk.css",
+    "static/js/2.7bb1f176.chunk.js",
+    "static/css/main.6718a0fa.chunk.css",
+    "static/js/main.fec95bcd.chunk.js"
+  ]
+}
