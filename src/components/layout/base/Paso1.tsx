@@ -122,7 +122,7 @@ const Paso1 = ({ handleNext, handleBack, updatePersona, dataPersona }: any) => {
         <label>Género</label>
         <div className="form-check mt-2">
           <input
-            className="form-check-input"
+            className="form-check-input form__check"
             type="radio"
             {...register("genero", {
               required: true,
@@ -134,7 +134,7 @@ const Paso1 = ({ handleNext, handleBack, updatePersona, dataPersona }: any) => {
 
         <div className="form-check mt-2">
           <input
-            className="form-check-input"
+            className="form-check-input form__check"
             type="radio"
             {...register("genero", {
               required: true,
@@ -148,7 +148,7 @@ const Paso1 = ({ handleNext, handleBack, updatePersona, dataPersona }: any) => {
         <label>¿A quién vamos a asegurar?</label>
         <div className="form-check mt-2">
           <input
-            className="form-check-input"
+            className="form-check-input form__check"
             type="radio"
             {...register("seguro", {
               required: true,
@@ -160,7 +160,7 @@ const Paso1 = ({ handleNext, handleBack, updatePersona, dataPersona }: any) => {
 
         <div className="form-check mt-2">
           <input
-            className="form-check-input"
+            className="form-check-input form__check"
             type="radio"
             {...register("seguro", {
               required: true,

@@ -56,6 +56,7 @@ export default function StepperBase() {
             handleNext={handleNext}
             handleBack={handleBack}
             updatePersona={updatePersona}
+            dataPersona={persona}
           />
         );
       default:

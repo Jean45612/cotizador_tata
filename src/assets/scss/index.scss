@@ -102,11 +102,16 @@ html {
 
 .form__check:checked[type="checkbox"] {
   background-image: url("../images/iconos/gl_correct.png") !important;
-}
-
-.form__check:checked {
   background-color: $verde !important;
   border-color: $verde !important;
+}
+
+.form__check:checked[type="radio"] {
+  background-image: none !important;
+  background-color: $verde !important;
+  border-color: $verde !important;
+  background-clip: content-box;
+  padding: 2px;
 }
 
 .alert__text {
@@ -136,6 +141,61 @@ html {
   color: $celeste;
   margin-left: -40px;
   cursor: pointer;
+}
+
+.plan__box {
+  border: 3px solid $plomo;
+  border-radius: 10px;
+  padding: 5px 5px 20px 15px;
+  cursor: pointer;
+}
+
+.plan__box--selected {
+  border: 3px solid $verde;
+}
+
+.plan__box__titulo {
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.plan__box__precio {
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 0;
+  position: relative;
+  margin-left: 10px;
+
+  &:after {
+    content: "S/";
+    position: absolute;
+    top: 8px;
+    left: -12px;
+    right: 0px;
+    bottom: 0;
+    font-size: 12px;
+  }
+}
+
+.plan__box__periodo {
+  font-weight: 400;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.plan__box__img {
+  width: 20px;
+  height: 20px;
+  float: right;
+  border: 1px solid $plomo;
+  border-radius: 100%;
+}
+
+.plan__box__img--selected {
+  border: none;
+  border-radius: none;
 }
 
 @media (min-width: 576px) {
