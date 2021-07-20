@@ -17,7 +17,7 @@ const tempPersona: Persona = {
   celular: "",
   terminos: false,
   comunicaciones: false,
-  plan: "",
+  plan: "1",
 };
 
 export default function StepperBase() {
