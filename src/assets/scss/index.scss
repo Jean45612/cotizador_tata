@@ -53,15 +53,15 @@ html {
   display: none;
 }
 
-.formInicio {
+.form {
   padding: 4.375rem 1.875rem;
 }
 
-.formInicio__titulo {
+.form__titulo {
   font-weight: inherit;
 }
 
-.formInicio__titulo--negrita {
+.form__titulo--negrita {
   font-weight: 400;
   color: $celeste;
 }
@@ -198,6 +198,88 @@ html {
   border-radius: none;
 }
 
+.proteccion__box {
+  border: 3px solid $plomo;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+.proteccion__box__title {
+  background-color: $plomo;
+  text-align: center;
+  padding: 0.5rem 0rem;
+  font-size: 0.875rem;
+}
+
+.proteccion__box__content {
+  margin: 0rem 1.5625rem;
+}
+
+.proteccion__box__content__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 1.5625rem;
+  border-bottom: 3px solid $plomo;
+}
+
+.proteccion__box__content__header__plan {
+  background-color: $verde;
+  color: white;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.proteccion__box__content__header__precio {
+  margin-bottom: 0.9375rem;
+}
+
+.proteccion__box__content__container__img {
+  width: 40%;
+  border-left: 3px solid $plomo;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.proteccion__box__content__img {
+  width: 6.25rem;
+  height: 5rem;
+  margin: 0.625rem;
+}
+
+.proteccion__box__content__beneficios {
+  margin-top: 1.5rem;
+}
+
+.proteccion__box__content__beneficios__list {
+  margin-bottom: 1.5rem;
+  text-decoration: line-through;
+  color: $plomoOscuro;
+}
+
+.proteccion__box__content__beneficios__list--selected {
+  text-decoration: none;
+  color: unset;
+}
+
+.proteccion__box__content__beneficios__list svg {
+  margin-right: 10px;
+  font-size: 15px;
+  color: $plomoOscuro;
+}
+
+.proteccion__box__content__beneficios__list--selected svg {
+  color: $celeste;
+}
+
+.proteccion__box__content__beneficios__list span {
+  font-size: 0.8125rem;
+  font-weight: 300;
+}
+
 @media (min-width: 576px) {
   .contenedor {
     grid-template-columns: 0.9fr 1fr; /*LOS ELEMENTOS DE LA GRID SE DIVIDIRAN EN 2 COLUMNAS DE ESE TAMAÑO */
@@ -211,7 +293,7 @@ html {
     display: block;
   }
 
-  .formInicio {
+  .form {
     padding: 3.75rem 0.625rem 0rem 5.3125rem;
   }
 
@@ -229,7 +311,7 @@ html {
     padding: 5.625rem 5rem 1.875rem;
   }
 
-  .formInicio {
+  .form {
     padding: 3.75rem 1.875rem 0rem 7.5rem;
   }
 
@@ -239,7 +321,7 @@ html {
 }
 
 @media (min-width: 1200px) {
-  .formInicio {
+  .form {
     padding: 3.75rem 4.6875rem 0 11.875rem;
   }
 }

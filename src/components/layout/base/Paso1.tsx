@@ -20,16 +20,16 @@ const Paso1 = ({ handleNext, handleBack, updatePersona, dataPersona }: any) => {
   };
 
   return (
-    <div className="formInicio">
+    <div className="form">
       <p>
         <span className="backIcon" onClick={handleBack}>
           {"<"}
         </span>
         <b className="color-celeste ps-3">PASO 1</b> DE 7
       </p>
-      <h2 className="formInicio__titulo">
+      <h2 className="form__titulo">
         Hola,
-        <span className="formInicio__titulo--negrita">
+        <span className="form__titulo--negrita">
           {" " + dataPersona.nombre}
         </span>
       </h2>

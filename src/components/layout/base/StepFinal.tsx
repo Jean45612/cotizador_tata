@@ -3,9 +3,9 @@ import React from "react";
 const StepFinal = () => {
   return (
     <div className="final__step">
-      <h2 className="formInicio__titulo">
+      <h2 className="form__titulo">
         ¡Gracias por
-        <span className="formInicio__titulo--negrita">
+        <span className="form__titulo--negrita">
           {" "}
           confiar en nosotros!
         </span>

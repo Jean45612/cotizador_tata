@@ -31,10 +31,10 @@ const FormInicio = ({ handleNext, updatePersona, dataPersona }: any) => {
   };
 
   return (
-    <div className="formInicio">
-      <h2 className="formInicio__titulo">
+    <div className="form">
+      <h2 className="form__titulo">
         Obtén tu
-        <span className="formInicio__titulo--negrita"> seguro ahora</span>
+        <span className="form__titulo--negrita"> seguro ahora</span>
       </h2>
       <p>Ingresa los datos para comenzar</p>
       <form onSubmit={handleSubmit(onSubmit)}>
