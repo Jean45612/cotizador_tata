@@ -21,7 +21,7 @@ const tempPersona: Persona = {
 };
 
 export default function StepperBase() {
-  const [activeStep, setActiveStep] = React.useState(2);
+  const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
   const steps = ["Inicio", "Paso 1", "Paso 2"];
 
