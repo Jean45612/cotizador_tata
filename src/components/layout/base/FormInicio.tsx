@@ -138,7 +138,7 @@ const FormInicio = ({ handleNext, updatePersona, dataPersona }: any) => {
 
         {errors && <Error error={errors} />}
         <br />
-        <input className="btnForm" type="submit" value="COMENCEMOS" />
+        <input className="btn btn__form" type="submit" value="COMENCEMOS" />
       </form>
     </div>
   );

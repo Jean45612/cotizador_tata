@@ -173,7 +173,7 @@ const Paso1 = ({ handleNext, handleBack, updatePersona, dataPersona }: any) => {
         {errors && <Error error={errors} />}
         <br />
         <div className="text-end">
-          <input className="btnForm" type="submit" value="CONTINUAR   >" />
+          <input className="btn btn__form" type="submit" value="CONTINUAR   >" />
         </div>
       </form>
     </div>

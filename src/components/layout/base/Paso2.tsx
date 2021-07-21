@@ -158,7 +158,7 @@ const Paso2 = ({ handleNext, handleBack, updatePersona, dataPersona }: any) => {
             type="button"
             value="ENVIAR COTIZACIÓN POR CORREO"
           />
-          <input className="btnForm" type="submit" value="COMPRAR PLAN" />
+          <input className="btn btn__form" type="submit" value="COMPRAR PLAN" />
         </div>
       </form>
     </div>

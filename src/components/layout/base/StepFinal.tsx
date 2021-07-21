@@ -16,7 +16,7 @@ const StepFinal = () => {
       </p>
         <br />
       <div className="text-end">
-        <button className="btnForm btnForm--final" type="button">
+        <button className="btn btn__form btn__form--final" type="button">
           IR A SALUD
         </button>
       </div>

@@ -13,117 +13,11 @@ html {
   font-size: 13px;
 }
 
-.contenedor {
-  display: grid;
-  font-weight: 300;
-}
-
-.base {
-  background-image: url("./../images/Base.png");
-  background-size: 100% 100%;
-  color: white;
-  padding: 5.625rem 1.875rem 2.5rem;
-  position: relative;
-}
-
-.base__titulo {
-  font-weight: inherit;
-  margin-bottom: 1.875rem;
-}
-
-.base__titulo--negrita {
-  font-weight: 400;
-  word-wrap: break-word;
-}
-
-.base__img {
-  width: 20px;
-  height: 20px;
-}
-
-.base__final {
-  font-size: 0.8125rem;
-  margin-top: 6.25rem;
-}
-
-.base__ilustracion {
-  position: absolute;
-  bottom: 3.125rem;
-  right: -7.5rem;
-  display: none;
-}
-
-.form {
-  padding: 4.375rem 1.875rem;
-}
-
-.form__titulo {
-  font-weight: inherit;
-}
-
-.form__titulo--negrita {
-  font-weight: 400;
-  color: $celeste;
-}
-
-.form__condiciones__descargar {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.btnForm {
-  display: inline-block;
-  font-weight: 300;
-  line-height: 1.5;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  padding: 0.625rem 1.5rem;
-  font-size: 0.75rem;
-  border-radius: 0.3125rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  background: $celeste;
-}
-
-.btnForm--final {
-  padding: 0.5rem 2.5rem;
-}
-
-.form__condiciones {
-  font-size: 0.875rem;
-}
-
-.form__check:checked[type="checkbox"] {
-  background-image: url("../images/iconos/gl_correct.png") !important;
-  background-color: $verde !important;
-  border-color: $verde !important;
-}
-
-.form__check:checked[type="radio"] {
-  background-image: none !important;
-  background-color: $verde !important;
-  border-color: $verde !important;
-  background-clip: content-box;
-  padding: 2px;
-}
+/* ------------------------UTILIDADES-----------------------------------*/
 
 .alert__text {
   font-size: 0.8125rem;
   margin-bottom: 0;
-}
-
-.final__step {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1.875rem 4.375rem;
 }
 
 .fontInherit {
@@ -143,142 +37,244 @@ html {
   cursor: pointer;
 }
 
+/* ----------------------- BLOQUES ---------------------------- */
+
+.contenedor {
+  display: grid;
+  font-weight: 300;
+}
+
+.base {
+  background-image: url("./../images/Base.png");
+  background-size: 100% 100%;
+  color: white;
+  padding: 5.625rem 1.875rem 2.5rem;
+  position: relative;
+
+  &__titulo {
+    font-weight: inherit;
+    margin-bottom: 1.875rem;
+
+    &--negrita {
+      font-weight: 400;
+      word-wrap: break-word;
+    }
+  }
+
+  &__img {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__final {
+    font-size: 0.8125rem;
+    margin-top: 6.25rem;
+  }
+
+  &__ilustracion {
+    position: absolute;
+    bottom: 3.125rem;
+    right: -7.5rem;
+    display: none;
+  }
+}
+
+.form {
+  padding: 4.375rem 1.875rem;
+
+  &__titulo {
+    font-weight: inherit;
+
+    &--negrita {
+      font-weight: 400;
+      color: $celeste;
+    }
+  }
+
+  &__condiciones {
+    font-size: 0.875rem;
+
+    &__descargar {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  &__check:checked {
+    &[type="checkbox"] {
+      background-image: url("../images/iconos/gl_correct.png") !important;
+      background-color: $verde !important;
+      border-color: $verde !important;
+    }
+
+    &[type="radio"] {
+      background-image: none !important;
+      background-color: $verde !important;
+      border-color: $verde !important;
+      background-clip: content-box;
+      padding: 2px;
+    }
+  }
+}
+
+.btn__form {
+  font-weight: 300 !important;
+  color: white !important;
+  padding: 0.625rem 1.5rem !important;
+  font-size: 0.75rem !important;
+  border-radius: 0.3125rem !important;
+  background-color: $celeste !important;
+
+  &--final {
+    padding: 0.5rem 2.5rem;
+  }
+}
+
+.final__step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.875rem 4.375rem;
+}
+
 .plan__box {
   border: 3px solid $plomo;
   border-radius: 10px;
   padding: 5px 5px 20px 15px;
   cursor: pointer;
-}
 
-.plan__box--selected {
-  border: 3px solid $verde;
-}
-
-.plan__box__titulo {
-  font-weight: 400;
-  font-size: 13px;
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-
-.plan__box__precio {
-  font-weight: 400;
-  font-size: 30px;
-  margin-bottom: 0;
-  position: relative;
-  margin-left: 10px;
-
-  &:after {
-    content: "S/";
-    position: absolute;
-    top: 8px;
-    left: -12px;
-    right: 0px;
-    bottom: 0;
-    font-size: 12px;
+  &--selected {
+    border: 3px solid $verde;
   }
-}
 
-.plan__box__periodo {
-  font-weight: 400;
-  font-size: 13px;
-  margin-bottom: 0;
-}
+  &__titulo {
+    font-weight: 400;
+    font-size: 0.8125rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
 
-.plan__box__img {
-  width: 20px;
-  height: 20px;
-  float: right;
-  border: 1px solid $plomo;
-  border-radius: 100%;
-}
+  &__precio {
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 0;
+    position: relative;
+    margin-left: 10px;
 
-.plan__box__img--selected {
-  border: none;
-  border-radius: none;
+    &:after {
+      content: "S/";
+      position: absolute;
+      top: 8px;
+      left: -12px;
+      right: 0px;
+      bottom: 0;
+      font-size: 12px;
+    }
+  }
+
+  &__periodo {
+    font-weight: 400;
+    font-size: 0.8125rem;
+    margin-bottom: 0;
+  }
+
+  &__img {
+    width: 20px;
+    height: 20px;
+    float: right;
+    border: 1px solid $plomo;
+    border-radius: 100%;
+
+    &--selected {
+      border: none;
+      border-radius: none;
+    }
+  }
 }
 
 .proteccion__box {
   border: 3px solid $plomo;
   border-radius: 0.625rem;
   overflow: hidden;
+
+  &__title {
+    background-color: $plomo;
+    text-align: center;
+    padding: 0.5rem 0rem;
+    font-size: 0.875rem;
+  }
+
+  &__content {
+    margin: 0rem 1.5625rem;
+
+    &__header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 1.5625rem;
+      border-bottom: 3px solid $plomo;
+
+      &__plan {
+        background-color: $verde;
+        color: white;
+        font-size: 12px;
+        padding: 5px;
+        border-radius: 10px;
+        font-weight: 500;
+      }
+
+      &__precio {
+        margin-bottom: 0.9375rem;
+      }
+    }
+
+    &__container__img {
+      width: 40%;
+      border-left: 3px solid $plomo;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    &__img {
+      width: 6.25rem;
+      height: 5rem;
+      margin: 0.625rem;
+    }
+
+    &__beneficios {
+      margin-top: 1.5rem;
+
+      &__list {
+        margin-bottom: 1.5rem;
+        text-decoration: line-through;
+        color: $plomoOscuro;
+
+        & svg {
+          margin-right: 10px;
+          font-size: 15px;
+          color: $plomoOscuro;
+        }
+
+        &--selected {
+          text-decoration: none;
+          color: unset;
+
+          & svg {
+            color: $celeste;
+          }
+        }
+
+        & span {
+          font-size: 0.8125rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
 }
 
-.proteccion__box__title {
-  background-color: $plomo;
-  text-align: center;
-  padding: 0.5rem 0rem;
-  font-size: 0.875rem;
-}
-
-.proteccion__box__content {
-  margin: 0rem 1.5625rem;
-}
-
-.proteccion__box__content__header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-bottom: 1.5625rem;
-  border-bottom: 3px solid $plomo;
-}
-
-.proteccion__box__content__header__plan {
-  background-color: $verde;
-  color: white;
-  font-size: 12px;
-  padding: 5px;
-  border-radius: 10px;
-  font-weight: 500;
-}
-
-.proteccion__box__content__header__precio {
-  margin-bottom: 0.9375rem;
-}
-
-.proteccion__box__content__container__img {
-  width: 40%;
-  border-left: 3px solid $plomo;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.proteccion__box__content__img {
-  width: 6.25rem;
-  height: 5rem;
-  margin: 0.625rem;
-}
-
-.proteccion__box__content__beneficios {
-  margin-top: 1.5rem;
-}
-
-.proteccion__box__content__beneficios__list {
-  margin-bottom: 1.5rem;
-  text-decoration: line-through;
-  color: $plomoOscuro;
-}
-
-.proteccion__box__content__beneficios__list--selected {
-  text-decoration: none;
-  color: unset;
-}
-
-.proteccion__box__content__beneficios__list svg {
-  margin-right: 10px;
-  font-size: 15px;
-  color: $plomoOscuro;
-}
-
-.proteccion__box__content__beneficios__list--selected svg {
-  color: $celeste;
-}
-
-.proteccion__box__content__beneficios__list span {
-  font-size: 0.8125rem;
-  font-weight: 300;
-}
+/* --------------------------------------- MEDIA QUERIES --------------------------------*/
 
 @media (min-width: 576px) {
   .contenedor {
